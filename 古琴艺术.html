@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古琴艺术 - 非遗匠心·传统文化数字化展示平台</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:"Microsoft YaHei",sans-serif;
+            scroll-behavior:smooth;
+        }
+
+        :root{
+            --primary:#8B4513;
+            --secondary:#D2B48C;
+            --dark:#333;
+            --light:#fff;
+            --gray:#f5f5f5;
+            --shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        body{
+            background:var(--gray);
+            color:var(--dark);
+            line-height:1.8;
+        }
+
+        .navbar{
+            background:var(--primary);
+            padding:15px 0;
+            position:sticky;
+            top:0;
+            z-index:100;
+            box-shadow: var(--shadow);
+        }
+
+        .container{
+            width:90%;
+            max-width:1000px;
+            margin:0 auto;
+        }
+
+        .nav-container{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+            color:white;
+            font-size:24px;
+            font-weight:bold;
+        }
+
+        .nav-menu{
+            display:flex;
+            list-style:none;
+            gap:25px;
+        }
+
+        .nav-menu a{
+            color:white;
+            text-decoration:none;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover{
+            color: var(--secondary);
+        }
+
+        .header{
+            padding:60px 0;
+            text-align:center;
+            background:var(--light);
+            box-shadow: var(--shadow);
+        }
+
+        .header h1{
+            font-size:36px;
+            color:var(--primary);
+            margin-bottom:10px;
+        }
+
+        .tag{
+            background:var(--secondary);
+            color:var(--primary);
+            padding:5px 12px;
+            border-radius:20px;
+            display:inline-block;
+            font-size:14px;
+            margin-bottom:20px;
+            font-weight: bold;
+        }
+
+        .content{
+            background:white;
+            padding:40px;
+            border-radius:15px;
+            margin:30px 0;
+            box-shadow:var(--shadow);
+        }
+
+        .content img{
+            width:100%;
+            border-radius:12px;
+            margin-bottom:25px;
+            max-height:500px;
+            object-fit:cover;
+        }
+
+        .content h3{
+            color:var(--primary);
+            margin:20px 0 10px;
+            font-size:22px;
+            border-left: 4px solid var(--secondary);
+            padding-left: 12px;
+        }
+
+        .content p{
+            font-size:16px;
+            color:#555;
+            margin-bottom:15px;
+            line-height:1.9;
+            text-align: justify;
+        }
+
+        .btn{
+            display:inline-block;
+            background:var(--primary);
+            color:white;
+            padding:12px 25px;
+            border-radius:30px;
+            text-decoration:none;
+            margin-top:20px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .btn:hover{
+            background: #6b3610;
+            transform: translateY(-2px);
+        }
+
+        .btn-group{
+            display:flex;
+            gap:15px;
+            justify-content:center;
+            margin:30px 0;
+        }
+
+        .footer{
+            background:var(--primary);
+            color:white;
+            text-align:center;
+            padding:30px;
+            margin-top:50px;
+        }
+
+        @media(max-width:768px){
+            .nav-menu{
+                display:none;
+            }
+            .header h1{
+                font-size:28px;
+            }
+            .content{
+                padding:25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container nav-container">
+            <div class="logo">非遗匠心</div>
+            <ul class="nav-menu">
+                <li><a href="非遗匠心·传统文化数字化展示平台.html">首页</a></li>
+                <li><a href="非遗项目展示.html">项目列表</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="header">
+        <h1>古琴艺术</h1>
+        <div class="tag">传统音乐 · 世界非物质文化遗产</div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <img src="img/古琴.jpg" alt="古琴艺术">
+            
+            <h3>项目简介</h3>
+            <p>古琴是中国最古老的弹拨乐器，有三千年以上历史，音色清雅、意境悠远，被誉为“圣人之器”，是文人修身养性的重要艺术。</p>
+
+            <h3>历史渊源</h3>
+            <p>古琴起源于上古时期，传说伏羲、神农造琴，周代成为文人必修之器，孔子、庄子、李白、苏轼等文人皆以琴为伴。</p>
+
+            <h3>艺术特点</h3>
+            <p>古琴音色温润清雅、余韵悠长，演奏讲究意境与心境，曲目多蕴含山水情怀、文人风骨，是中国传统音乐的最高境界。</p>
+
+            <h3>经典曲目</h3>
+            <p>代表曲目有《高山流水》《广陵散》《平沙落雁》《梅花三弄》等，每一首都是中国音乐史上的经典之作。</p>
+
+            <h3>文化价值</h3>
+            <p>古琴是中华传统音乐的瑰宝，2003年列入人类非物质文化遗产代表作名录，是中国文化精神的重要象征。</p>
+
+            <h3>传承意义</h3>
+            <p>古琴承载着中国文人的精神追求，传承古琴艺术，能让大众感受古典音乐之美，传承清雅淡泊的东方风骨。</p>
+
+            <div class="btn-group">
+                <a href="非遗项目展示.html" class="btn">返回项目列表</a>
+                <a href="非遗匠心·传统文化数字化展示平台.html" class="btn">返回首页</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>非遗匠心·传统文化数字化展示平台 © 2026</p>
+        <p>传承中华优秀传统文化 · 守护非物质文化遗产</p>
+    </div>
+</body>
+</html>

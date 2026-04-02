@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中医针灸 - 非遗匠心·传统文化数字化展示平台</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:"Microsoft YaHei",sans-serif;
+            scroll-behavior:smooth;
+        }
+
+        :root{
+            --primary:#8B4513;
+            --secondary:#D2B48C;
+            --dark:#333;
+            --light:#fff;
+            --gray:#f5f5f5;
+            --shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        body{
+            background:var(--gray);
+            color:var(--dark);
+            line-height:1.8;
+        }
+
+        .navbar{
+            background:var(--primary);
+            padding:15px 0;
+            position:sticky;
+            top:0;
+            z-index:100;
+            box-shadow: var(--shadow);
+        }
+
+        .container{
+            width:90%;
+            max-width:1000px;
+            margin:0 auto;
+        }
+
+        .nav-container{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+            color:white;
+            font-size:24px;
+            font-weight:bold;
+        }
+
+        .nav-menu{
+            display:flex;
+            list-style:none;
+            gap:25px;
+        }
+
+        .nav-menu a{
+            color:white;
+            text-decoration:none;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover{
+            color: var(--secondary);
+        }
+
+        .header{
+            padding:60px 0;
+            text-align:center;
+            background:var(--light);
+            box-shadow: var(--shadow);
+        }
+
+        .header h1{
+            font-size:36px;
+            color:var(--primary);
+            margin-bottom:10px;
+        }
+
+        .tag{
+            background:var(--secondary);
+            color:var(--primary);
+            padding:5px 12px;
+            border-radius:20px;
+            display:inline-block;
+            font-size:14px;
+            margin-bottom:20px;
+            font-weight: bold;
+        }
+
+        .content{
+            background:white;
+            padding:40px;
+            border-radius:15px;
+            margin:30px 0;
+            box-shadow:var(--shadow);
+        }
+
+        .content img{
+            width:100%;
+            border-radius:12px;
+            margin-bottom:25px;
+            max-height:500px;
+            object-fit:cover;
+        }
+
+        .content h3{
+            color:var(--primary);
+            margin:20px 0 10px;
+            font-size:22px;
+            border-left: 4px solid var(--secondary);
+            padding-left: 12px;
+        }
+
+        .content p{
+            font-size:16px;
+            color:#555;
+            margin-bottom:15px;
+            line-height:1.9;
+            text-align: justify;
+        }
+
+        .btn{
+            display:inline-block;
+            background:var(--primary);
+            color:white;
+            padding:12px 25px;
+            border-radius:30px;
+            text-decoration:none;
+            margin-top:20px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .btn:hover{
+            background: #6b3610;
+            transform: translateY(-2px);
+        }
+
+        .btn-group{
+            display:flex;
+            gap:15px;
+            justify-content:center;
+            margin:30px 0;
+        }
+
+        .footer{
+            background:var(--primary);
+            color:white;
+            text-align:center;
+            padding:30px;
+            margin-top:50px;
+        }
+
+        @media(max-width:768px){
+            .nav-menu{
+                display:none;
+            }
+            .header h1{
+                font-size:28px;
+            }
+            .content{
+                padding:25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container nav-container">
+            <div class="logo">非遗匠心</div>
+            <ul class="nav-menu">
+                <li><a href="非遗匠心·传统文化数字化展示平台.html">首页</a></li>
+                <li><a href="非遗项目展示.html">项目列表</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="header">
+        <h1>中医针灸</h1>
+        <div class="tag">传统医药 · 世界非物质文化遗产</div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <img src="img/中医针灸.jpg" alt="中医针灸">
+            
+            <h3>项目简介</h3>
+            <p>中医针灸是中国传统医学瑰宝，通过针刺、艾灸人体穴位调理气血、平衡阴阳，达到预防与治疗疾病的目的。</p>
+
+            <h3>历史渊源</h3>
+            <p>针灸起源于远古时期，石器时代使用砭石，商周时期使用金属针具，《黄帝内经》奠定理论基础，至今已有五千年历史。</p>
+
+            <h3>艺术特点</h3>
+            <p>针灸以经络穴位理论为核心，讲究辨证施治、取穴精准、手法娴熟，具有疗效显著、副作用小、绿色养生的特点。</p>
+
+            <h3>主要技法</h3>
+            <p>针法：用金属针刺激穴位；灸法：用艾绒温热熏烤穴位。两者配合使用，调理身体机能，治疗内外妇儿各科疾病。</p>
+
+            <h3>文化价值</h3>
+            <p>中医针灸是中华传统医学的精华，2010年列入人类非物质文化遗产代表作名录，传播到全球180多个国家和地区。</p>
+
+            <h3>传承意义</h3>
+            <p>针灸是中医走向世界的重要名片，传承针灸技艺，能弘扬传统医学，守护中华养生智慧，造福人类健康。</p>
+
+            <div class="btn-group">
+                <a href="非遗项目展示.html" class="btn">返回项目列表</a>
+                <a href="非遗匠心·传统文化数字化展示平台.html" class="btn">返回首页</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>非遗匠心·传统文化数字化展示平台 © 2026</p>
+        <p>传承中华优秀传统文化 · 守护非物质文化遗产</p>
+    </div>
+</body>
+</html>

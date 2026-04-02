@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>非遗文创产品展示与推广 - 非遗匠心展示平台</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Microsoft YaHei", sans-serif;
+			}
+
+			:root {
+				--primary: #8B4513;
+				--secondary: #D2B48C;
+				--dark: #333;
+				--light: #fff;
+				--gray: #f5f5f5;
+			}
+
+			body {
+				line-height: 1.6;
+				color: var(--dark);
+				background: var(--gray);
+			}
+
+			.navbar {
+				background: var(--primary);
+				padding: 15px 0;
+				position: sticky;
+				top: 0;
+				z-index: 100;
+			}
+
+			.container {
+				width: 90%;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.nav-container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.logo {
+				color: var(--light);
+				font-size: 24px;
+				font-weight: bold;
+			}
+
+			.nav-menu {
+				display: flex;
+				list-style: none;
+			}
+
+			.nav-menu li {
+				margin-left: 30px;
+			}
+
+			.nav-menu a {
+				color: var(--light);
+				text-decoration: none;
+				font-size: 16px;
+				transition: 0.3s;
+			}
+
+			.nav-menu a:hover {
+				color: var(--secondary);
+			}
+
+			.header {
+				padding: 60px 0;
+				text-align: center;
+				background: var(--light);
+			}
+
+			.header h1 {
+				font-size: 36px;
+				color: var(--primary);
+				margin-bottom: 15px;
+			}
+
+			.header p {
+				font-size: 18px;
+				color: #555;
+			}
+
+			.section-title {
+				text-align: center;
+				margin: 50px 0 30px;
+				font-size: 32px;
+				color: var(--primary);
+				position: relative;
+			}
+
+			.section-title::after {
+				content: '';
+				width: 80px;
+				height: 3px;
+				background: var(--secondary);
+				position: absolute;
+				bottom: -10px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			.product-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+				gap: 30px;
+				margin-bottom: 50px;
+			}
+
+			.product-card {
+				background: var(--light);
+				border-radius: 15px;
+				overflow: hidden;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+				transition: 0.3s;
+			}
+
+			.product-card:hover {
+				transform: translateY(-5px);
+			}
+
+			.product-card img {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+				display: block;
+			}
+
+			.product-card-body {
+				padding: 20px;
+			}
+
+			.product-card-title {
+				font-size: 18px;
+				color: var(--primary);
+				margin-bottom: 10px;
+			}
+
+			.product-card-price {
+				font-size: 20px;
+				color: #e74c3c;
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+
+			.product-card-text {
+				color: #666;
+				font-size: 14px;
+				margin-bottom: 15px;
+			}
+
+			.product-card-btn {
+				display: inline-block;
+				padding: 8px 15px;
+				background: var(--primary);
+				color: var(--light);
+				text-decoration: none;
+				border-radius: 5px;
+				font-size: 14px;
+				transition: 0.3s;
+			}
+
+			.product-card-btn:hover {
+				background: #6d3510;
+			}
+
+			.footer {
+				background: var(--primary);
+				color: var(--light);
+				text-align: center;
+				padding: 30px 0;
+				margin-top: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="container nav-container">
+				<div class="logo">非遗匠心</div>
+				<ul class="nav-menu">
+					<li><a href="非遗匠心·传统文化数字化展示平台.html">首页</a></li>
+					<li><a href="非遗项目展示.html">非遗展示</a></li>
+					<li><a href="数字展厅.html">数字展厅</a></li>
+					<li><a href="匠心传承.html">匠心传承</a></li>
+					<li><a href="新闻资讯.html">新闻资讯</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="header">
+			<div class="container">
+				<h1>非遗文创产品展示与推广</h1>
+				<p>让传统工艺融入现代生活，感受非遗文创的独特魅力</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<h2 class="section-title">精选文创</h2>
+			<div class="product-grid">
+				<div class="product-card">
+					<img src="https://img2.baidu.com/it/u=2468135790,1357902468" alt="剪纸书签">
+					<div class="product-card-body">
+						<h3 class="product-card-title">剪纸艺术书签套装</h3>
+						<p class="product-card-price">¥58.00</p>
+						<p class="product-card-text">精选传统吉祥图案剪纸，制作成精美书签，实用又富有文化气息。</p>
+						<a href="#" class="product-card-btn">立即购买</a>
+					</div>
+				</div>
+				<div class="product-card">
+					<img src="https://img1.baidu.com/it/u=1357924680,2468013579" alt="陶艺茶具">
+					<div class="product-card-body">
+						<h3 class="product-card-title">手工陶艺茶具套装</h3>
+						<p class="product-card-price">¥298.00</p>
+						<p class="product-card-text">非遗传承人手工制作，釉色温润，器型典雅，是品茶和收藏的佳品。</p>
+						<a href="#" class="product-card-btn">立即购买</a>
+					</div>
+				</div>
+				<div class="product-card">
+					<img src="https://img0.baidu.com/it/u=161232417,4212567809&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667" alt="刺绣团扇">
+					<div class="product-card-body">
+						<h3 class="product-card-title">苏绣花鸟团扇</h3>
+						<p class="product-card-price">¥168.00</p>
+						<p class="product-card-text">双面苏绣工艺，图案精美，色彩雅致，是极具东方韵味的装饰品。</p>
+						<a href="#" class="product-card-btn">立即购买</a>
+					</div>
+				</div>
+				<div class="product-card">
+					<img src="https://img2.baidu.com/it/u=1722103000,202330000&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667" alt="书法作品">
+					<div class="product-card-body">
+						<h3 class="product-card-title">名家书法作品（卷轴）</h3>
+						<p class="product-card-price">¥398.00</p>
+						<p class="product-card-text">著名书法家亲笔书写，内容为经典诗词，装裱精美，适合悬挂装饰。</p>
+						<a href="#" class="product-card-btn">立即购买</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<p>非遗匠心·传统文化数字化展示平台 © 2026 版权所有</p>
+				<p>传承中华优秀传统文化 · 推动非遗数字化保护与传播</p>
+			</div>
+		</footer>
+	</body>
+</html>

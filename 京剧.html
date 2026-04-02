@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京剧 - 非遗匠心·传统文化数字化展示平台</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:"Microsoft YaHei",sans-serif;
+            scroll-behavior:smooth;
+        }
+
+        :root{
+            --primary:#8B4513;
+            --secondary:#D2B48C;
+            --dark:#333;
+            --light:#fff;
+            --gray:#f5f5f5;
+            --shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        body{
+            background:var(--gray);
+            color:var(--dark);
+            line-height:1.8;
+        }
+
+        /* 导航栏 */
+        .navbar{
+            background:var(--primary);
+            padding:15px 0;
+            position:sticky;
+            top:0;
+            z-index:100;
+            box-shadow: var(--shadow);
+        }
+
+        .container{
+            width:90%;
+            max-width:1000px;
+            margin:0 auto;
+        }
+
+        .nav-container{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+            color:white;
+            font-size:24px;
+            font-weight:bold;
+        }
+
+        .nav-menu{
+            display:flex;
+            list-style:none;
+            gap:25px;
+        }
+
+        .nav-menu a{
+            color:white;
+            text-decoration:none;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover{
+            color: var(--secondary);
+        }
+
+        /* 头部 */
+        .header{
+            padding:60px 0;
+            text-align:center;
+            background:var(--light);
+            box-shadow: var(--shadow);
+        }
+
+        .header h1{
+            font-size:36px;
+            color:var(--primary);
+            margin-bottom:10px;
+        }
+
+        .tag{
+            background:var(--secondary);
+            color:var(--primary);
+            padding:5px 12px;
+            border-radius:20px;
+            display:inline-block;
+            font-size:14px;
+            margin-bottom:20px;
+            font-weight: bold;
+        }
+
+        /* 内容区域 */
+        .content{
+            background:white;
+            padding:40px;
+            border-radius:15px;
+            margin:30px 0;
+            box-shadow:var(--shadow);
+        }
+
+        .content img{
+            width:100%;
+            border-radius:12px;
+            margin-bottom:25px;
+            max-height:500px;
+            object-fit:cover;
+        }
+
+        .content h3{
+            color:var(--primary);
+            margin:20px 0 10px;
+            font-size:22px;
+            border-left: 4px solid var(--secondary);
+            padding-left: 12px;
+        }
+
+        .content p{
+            font-size:16px;
+            color:#555;
+            margin-bottom:15px;
+            line-height:1.9;
+            text-align: justify;
+        }
+
+        /* 按钮 */
+        .btn{
+            display:inline-block;
+            background:var(--primary);
+            color:white;
+            padding:12px 25px;
+            border-radius:30px;
+            text-decoration:none;
+            margin-top:20px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .btn:hover{
+            background: #6b3610;
+            transform: translateY(-2px);
+        }
+
+        .btn-group{
+            display:flex;
+            gap:15px;
+            justify-content:center;
+            margin:30px 0;
+        }
+
+        /* 页脚 */
+        .footer{
+            background:var(--primary);
+            color:white;
+            text-align:center;
+            padding:30px;
+            margin-top:50px;
+        }
+
+        /* 移动端适配 */
+        @media(max-width:768px){
+            .nav-menu{
+                display:none;
+            }
+            .header h1{
+                font-size:28px;
+            }
+            .content{
+                padding:25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <div class="container nav-container">
+            <div class="logo">非遗匠心</div>
+            <ul class="nav-menu">
+                <li><a href="非遗匠心·传统文化数字化展示平台.html">首页</a></li>
+                <li><a href="非遗项目展示.html">项目列表</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 头部标题 -->
+    <div class="header">
+        <h1>京剧</h1>
+        <div class="tag">传统戏剧 · 中国国粹 · 人类非物质文化遗产</div>
+    </div>
+
+    <!-- 详细内容 -->
+    <div class="container">
+        <div class="content">
+            <img src="img/京剧.webp" alt="京剧表演">
+            
+            <h3>项目简介</h3>
+            <p>京剧是中国影响最大的戏曲剧种，被誉为“国剧”，形成于清代乾隆年间，至今已有近200年历史。它以独特的艺术魅力，成为中华文化最具代表性的符号之一。</p>
+
+            <h3>历史渊源</h3>
+            <p>京剧融合了徽剧、汉剧、昆曲、秦腔等多种戏曲精华，经过数十年的交流融合，于清代道光年间正式形成。以北京为中心，逐渐走向全国，成为流传最广、影响最大的戏曲剧种。</p>
+
+            <h3>艺术特点</h3>
+            <p>京剧以唱、念、做、打为表演手段，综合了音乐、舞蹈、武术、美术等多种艺术形式。角色分为生、旦、净、丑四大行当，服饰华丽、脸谱鲜明、唱腔优美、程式严谨。</p>
+
+            <h3>行当划分</h3>
+            <p>生：男性角色，包含老生、小生、武生；旦：女性角色，包含青衣、花旦、刀马旦；净：性格鲜明的男性角色，俗称花脸；丑：幽默滑稽角色，分文丑、武丑。</p>
+
+            <h3>文化价值</h3>
+            <p>京剧是中华传统文化的重要载体，蕴含着中华民族的审美情趣、道德观念与文化精神。2010年被列入联合国教科文组织人类非物质文化遗产代表作名录，是世界认识中国的重要艺术窗口。</p>
+
+            <h3>传承意义</h3>
+            <p>京剧不仅是一种表演艺术，更是中华文化的精神象征。传承京剧艺术，对于弘扬民族文化、增强文化自信、推动中华文化走向世界具有重要意义。</p>
+
+            <!-- 按钮组 -->
+            <div class="btn-group">
+                <a href="非遗项目展示.html" class="btn">返回项目列表</a>
+                <a href="非遗匠心·传统文化数字化展示平台.html" class="btn">返回首页</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        <p>非遗匠心·传统文化数字化展示平台 © 2026</p>
+        <p>传承中华优秀传统文化 · 守护非物质文化遗产</p>
+    </div>
+
+</body>
+</html>

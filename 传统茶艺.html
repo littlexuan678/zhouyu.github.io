@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传统茶艺 - 非遗匠心·传统文化数字化展示平台</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:"Microsoft YaHei",sans-serif;
+            scroll-behavior:smooth;
+        }
+
+        :root{
+            --primary:#8B4513;
+            --secondary:#D2B48C;
+            --dark:#333;
+            --light:#fff;
+            --gray:#f5f5f5;
+            --shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        body{
+            background:var(--gray);
+            color:var(--dark);
+            line-height:1.8;
+        }
+
+        .navbar{
+            background:var(--primary);
+            padding:15px 0;
+            position:sticky;
+            top:0;
+            z-index:100;
+            box-shadow: var(--shadow);
+        }
+
+        .container{
+            width:90%;
+            max-width:1000px;
+            margin:0 auto;
+        }
+
+        .nav-container{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+            color:white;
+            font-size:24px;
+            font-weight:bold;
+        }
+
+        .nav-menu{
+            display:flex;
+            list-style:none;
+            gap:25px;
+        }
+
+        .nav-menu a{
+            color:white;
+            text-decoration:none;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover{
+            color: var(--secondary);
+        }
+
+        .header{
+            padding:60px 0;
+            text-align:center;
+            background:var(--light);
+            box-shadow: var(--shadow);
+        }
+
+        .header h1{
+            font-size:36px;
+            color:var(--primary);
+            margin-bottom:10px;
+        }
+
+        .tag{
+            background:var(--secondary);
+            color:var(--primary);
+            padding:5px 12px;
+            border-radius:20px;
+            display:inline-block;
+            font-size:14px;
+            margin-bottom:20px;
+            font-weight: bold;
+        }
+
+        .content{
+            background:white;
+            padding:40px;
+            border-radius:15px;
+            margin:30px 0;
+            box-shadow:var(--shadow);
+        }
+
+        .content img{
+            width:100%;
+            border-radius:12px;
+            margin-bottom:25px;
+            max-height:500px;
+            object-fit:cover;
+        }
+
+        .content h3{
+            color:var(--primary);
+            margin:20px 0 10px;
+            font-size:22px;
+            border-left: 4px solid var(--secondary);
+            padding-left: 12px;
+        }
+
+        .content p{
+            font-size:16px;
+            color:#555;
+            margin-bottom:15px;
+            line-height:1.9;
+            text-align: justify;
+        }
+
+        .btn{
+            display:inline-block;
+            background:var(--primary);
+            color:white;
+            padding:12px 25px;
+            border-radius:30px;
+            text-decoration:none;
+            margin-top:20px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .btn:hover{
+            background: #6b3610;
+            transform: translateY(-2px);
+        }
+
+        .btn-group{
+            display:flex;
+            gap:15px;
+            justify-content:center;
+            margin:30px 0;
+        }
+
+        .footer{
+            background:var(--primary);
+            color:white;
+            text-align:center;
+            padding:30px;
+            margin-top:50px;
+        }
+
+        @media(max-width:768px){
+            .nav-menu{
+                display:none;
+            }
+            .header h1{
+                font-size:28px;
+            }
+            .content{
+                padding:25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container nav-container">
+            <div class="logo">非遗匠心</div>
+            <ul class="nav-menu">
+                <li><a href="非遗匠心·传统文化数字化展示平台.html">首页</a></li>
+                <li><a href="非遗项目展示.html">项目列表</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="header">
+        <h1>传统茶艺</h1>
+        <div class="tag">传统习俗 · 国家级非物质文化遗产</div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <img src="img/传统茶艺.jpg" alt="传统茶艺">
+            
+            <h3>项目简介</h3>
+            <p>传统茶艺是以茶为载体的礼仪文化，包含选茶、备器、烹茶、品饮等流程，体现中国文人雅士清雅的生活态度与修身之道。</p>
+
+            <h3>历史渊源</h3>
+            <p>中国饮茶起源于神农时期，唐宋时期形成茶艺文化，明代普及泡茶法，历经数千年发展，形成了独具特色的中华茶艺体系。</p>
+
+            <h3>艺术特点</h3>
+            <p>茶艺讲究和、静、怡、真，注重茶、器、水、火、人的和谐统一，仪式优雅、意境清幽，是集礼仪、美学、养生于一体的生活艺术。</p>
+
+            <h3>茶艺流程</h3>
+            <p>传统茶艺包括备器、选水、取火、候汤、习茶五大环节，每一步都讲究细致与用心，通过泡茶、奉茶、品茶传递礼仪与情感。</p>
+
+            <h3>文化价值</h3>
+            <p>茶艺是中华茶文化的核心，2022年列入人类非物质文化遗产代表作名录，是中国对外文化交流的重要名片。</p>
+
+            <h3>传承意义</h3>
+            <p>茶艺能修身养性、陶冶情操，传承茶艺文化，能让大众感受中式生活美学，传承清雅平和的东方智慧。</p>
+
+            <div class="btn-group">
+                <a href="非遗项目展示.html" class="btn">返回项目列表</a>
+                <a href="非遗匠心·传统文化数字化展示平台.html" class="btn">返回首页</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>非遗匠心·传统文化数字化展示平台 © 2026</p>
+        <p>传承中华优秀传统文化 · 守护非物质文化遗产</p>
+    </div>
+</body>
+</html>

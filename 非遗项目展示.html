@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>非遗项目展示 - 非遗匠心·传统文化数字化展示平台</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* 非遗主题配色 */
+        :root {
+            --primary: #8B4513;
+            --secondary: #D2B48C;
+            --dark: #333;
+            --light: #fff;
+            --gray: #f5f5f5;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        body {
+            background-color: var(--gray);
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            background-color: var(--primary);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--light);
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            color: var(--light);
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--secondary);
+        }
+
+        .menu-btn {
+            display: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* 头部banner */
+        .page-header {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://pic.baike.soso.com/ugc/baikepic2/25802/cut-20220421160224-1443519694_png_1200_675.jpg/0');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--light);
+        }
+
+        .header-content h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .header-content p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* 标题样式 */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+            font-size: 36px;
+            color: var(--primary);
+            position: relative;
+            font-weight: bold;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 100px;
+            height: 4px;
+            background: var(--secondary);
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        /* 非遗展示卡片（大图+详情） */
+        .heritage-list {
+            padding: 20px 0 80px;
+        }
+
+        .card-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: var(--light);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .card:hover img {
+            transform: scale(1.08);
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background: var(--secondary);
+            color: #8B4513;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .card-desc {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* 返回首页按钮 */
+        .back-btn {
+            display: inline-block;
+            margin: 30px 0;
+            padding: 12px 25px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #6d3510;
+        }
+
+        /* 页脚 */
+        .footer {
+            background-color: var(--primary);
+            color: var(--light);
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--primary);
+                padding: 20px;
+                gap: 15px;
+            }
+            .menu-btn { display: block; }
+            .header-content h1 { font-size: 36px; }
+            .section-title { font-size: 28px; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航 -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">非遗匠心</div>
+            <div class="menu-btn">☰</div>
+            <ul class="nav-menu">
+                <li><a href="非遗匠心·传统文化数字化展示平台.html">返回首页</a></li>
+                <li><a href="#list">非遗项目</a></li>
+                <li><a href="数字展厅.html">数字展厅</a></li>
+                <li><a href="匠心传承.html">匠心传承</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 头部banner -->
+    <section class="page-header">
+        <div class="header-content">
+            <h1>非遗项目展示</h1>
+            <p>汇集中华经典非物质文化遗产，传承千年技艺，守护民族根脉</p>
+            <a href="#list" class="back-btn" style="margin-top:25px">查看全部项目</a>
+        </div>
+    </section>
+
+    <!-- 非遗项目列表 -->
+    <section class="heritage-list" id="list">
+        <div class="container">
+            <h2 class="section-title">经典非遗项目全览</h2>
+
+            <div class="card-box">
+                <!-- 1 京剧 -->
+                <div class="card">
+                    <img src="img/京剧.webp" alt="京剧">
+                    <div class="card-body">
+                        <div class="card-tag"><a href="京剧.html">传统戏剧</a></div>
+                        <h3 class="card-title"><a href="京剧.html">京剧</a></h3>
+                        <p class="card-desc">中国国粹，被誉为“国剧”，形成于北京，有近200年历史。融合唱、念、做、打，角色分为生、旦、净、丑，是中国影响力最大的戏曲剧种。</p>
+                    </div>
+                </div>
+
+                <!-- 2 剪纸 -->
+                <div class="card">
+                    <img src="img/剪纸.png" alt="剪纸">
+                    <div class="card-body">
+                        <div class="card-tag"><a href="剪纸.html">民间美术</a></div>
+                        <h3 class="card-title"><a href="剪纸.html">剪纸</a></h3>
+                        <p class="card-desc">中国最古老的民间艺术之一，以剪刀或刻刀为工具，在纸上创作出花鸟、人物、吉祥图案等，用于节日装饰、窗花、礼品点缀。</p>
+                    </div>
+                </div>
+
+                <!-- 3 陶艺 -->
+                <div class="card">
+                    <img src="img/陶艺.jpg" alt="传统陶艺">
+                    <div class="card-body">
+                        <div class="card-tag"><a href="传统陶艺.html">传统技艺</a></div>
+                        <h3 class="card-title"><a href="传统陶艺.html">传统陶艺</a></h3>
+                        <p class="card-desc">以黏土为原料，经手工捏制、拉坯、雕刻、烧制而成的器具艺术。中国陶艺历史超万年，是中华文明的重要载体。</p>
+                    </div>
+                </div>
+
+                <!-- 4 书法 -->
+                <div class="card">
+                    <img src="img/中国书法.webp" alt="中国书法">
+                    <div class="card-body">
+                        <div class="card-tag"><a href="中国书法.html">传统艺术</a></div>
+                        <h3 class="card-title"><a href="中国书法.html">中国书法</a></h3>
+                        <p class="card-desc">以汉字为载体，以毛笔为工具，通过线条、结构、章法展现东方美学。包含篆、隶、楷、行、草五种书体，被誉为无言的诗。</p>
+                    </div>
+                </div>
+
+                <!-- 5 苏绣 -->
+                <div class="card">
+                    <img src="img/苏绣.webp" alt="苏绣">
+                    <div class="card-body">
+                        <div class="card-tag"><a href="苏绣.html">传统刺绣</a></div>
+                        <h3 class="card-title"><a href="苏绣.html">苏绣</a></h3>
+                        <p class="card-desc">中国四大名绣之首，起源于苏州，针法精细、色彩雅致、图案秀丽，有“针尖上的艺术”美称，作品精细到可绣出发丝般线条。</p>
+                    </div>
+                </div>
+
+                <!-- 6 皮影戏 -->
+                <div class="card">
+                    <img src="img/皮影戏.webp" alt="皮影戏">
+                    <div class="card-body">
+                        <div class="card-tag"><a href="皮影戏.html">传统戏曲</a></div>
+                        <h3 class="card-title"><a href="皮影戏.html">皮影戏</a></h3>
+                        <p class="card-desc">中国最早的戏曲形式之一，用灯光照射兽皮或纸板雕刻的人物剪影表演故事，集绘画、雕刻、文学、音乐于一体。</p>
+                    </div>
+                </div>
+
+                <!-- 7 昆曲 -->
+                <div class="card">
+                    <img src="img/昆曲.jpg" alt="昆曲">
+                    <div class="card-body">
+                        <div class="card-tag"><a href="昆曲.html">传统戏剧</a></div>
+                        <h3 class="card-title"><a href="昆曲.html">昆曲</a></h3>
+                        <p class="card-desc">被誉为“百戏之祖”，唱腔婉转、表演优雅，是中国最古老的戏曲声腔，被联合国评为人类非物质文化遗产。</p>
+                    </div>
+                </div>
+
+                <!-- 8 茶艺 -->
+                <div class="card">
+                    <img src="img/传统茶艺.jpg" alt="传统茶艺">
+                    <div class="card-body">
+                        <div class="card-tag"><a href="传统茶艺.html">传统习俗</a></div>
+                        <h3 class="card-title"><a href="传统茶艺.html">传统茶艺</a></h3>
+                        <p class="card-desc">以茶为载体的礼仪文化，包含选茶、备器、烹茶、品饮等流程，体现中国文人雅士的清雅生活态度。</p>
+                    </div>
+                </div>
+
+                <!-- 9 木版年画 -->
+                <div class="card">
+                    <img src="img/木版年画.jpg" alt="木版年画">
+                    <div class="card-body">
+                        <div class="card-tag"><a href="木版年画.html">民间美术</a></div>
+                        <h3 class="card-title"><a href="木版年画.html">木版年画</a></h3>
+                        <p class="card-desc">民间用于新年祈福、装饰的版画艺术，色彩鲜艳、题材吉祥，以杨柳青、桃花坞、杨家埠最为著名。</p>
+                    </div>
+                </div>
+
+                <!-- 10 中医针灸 -->
+                <div class="card">
+                    <img src="img/中医针灸.jpg" alt="中医针灸">
+                    <div class="card-body">
+                        <div class="card-tag"><a href="中医针灸.html">传统医药</a></div>
+                        <h3 class="card-title"><a href="中医针灸.html">中医针灸</a></h3>
+                        <p class="card-desc">中国传统医学瑰宝，通过针刺、艾灸人体穴位调理身体，已被列入世界非物质文化遗产名录。</p>
+                    </div>
+                </div>
+
+                <!-- 11 古琴 -->
+                <div class="card">
+                    <img src="img/古琴.jpg" alt="古琴">
+                    <div class="card-body">
+                        <div class="card-tag"><a href="古琴艺术.html">传统音乐</a></div>
+                        <h3 class="card-title"><a href="古琴艺术.html">古琴艺术</a></h3>
+                        <p class="card-desc">中国最古老的弹拨乐器，有三千年以上历史，音色清雅、意境悠远，是文人修身养性的重要艺术。</p>
+                    </div>
+                </div>
+
+                <!-- 12 舞龙舞狮 -->
+                <div class="card">
+                    <img src="img/舞龙舞狮.jpg" alt="舞龙舞狮">
+                    <div class="card-body">
+                        <div class="card-tag"><a href="舞龙舞狮.html">传统民俗</a></div>
+                        <h3 class="card-title"><a href="舞龙舞狮.html">舞龙舞狮</a></h3>
+                        <p class="card-desc">中国传统民俗表演，象征吉祥、驱邪、纳福，是节日庆典、开业仪式中必不可少的文化活动。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 返回首页 -->
+            <div style="text-align: center;">
+                <a href="非遗匠心·传统文化数字化展示平台.html" class="back-btn">返回首页</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>非遗匠心·传统文化数字化展示平台 © 2026 版权所有</p>
+            <p>非遗项目展示 | 传承中华优秀传统文化</p>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单
+        const menuBtn = document.querySelector('.menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        menuBtn.addEventListener('click', () => {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html>

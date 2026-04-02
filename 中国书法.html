@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国书法 - 非遗匠心·传统文化数字化展示平台</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:"Microsoft YaHei",sans-serif;
+            scroll-behavior:smooth;
+        }
+
+        :root{
+            --primary:#8B4513;
+            --secondary:#D2B48C;
+            --dark:#333;
+            --light:#fff;
+            --gray:#f5f5f5;
+            --shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        body{
+            background:var(--gray);
+            color:var(--dark);
+            line-height:1.8;
+        }
+
+        .navbar{
+            background:var(--primary);
+            padding:15px 0;
+            position:sticky;
+            top:0;
+            z-index:100;
+            box-shadow: var(--shadow);
+        }
+
+        .container{
+            width:90%;
+            max-width:1000px;
+            margin:0 auto;
+        }
+
+        .nav-container{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+            color:white;
+            font-size:24px;
+            font-weight:bold;
+        }
+
+        .nav-menu{
+            display:flex;
+            list-style:none;
+            gap:25px;
+        }
+
+        .nav-menu a{
+            color:white;
+            text-decoration:none;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover{
+            color: var(--secondary);
+        }
+
+        .header{
+            padding:60px 0;
+            text-align:center;
+            background:var(--light);
+            box-shadow: var(--shadow);
+        }
+
+        .header h1{
+            font-size:36px;
+            color:var(--primary);
+            margin-bottom:10px;
+        }
+
+        .tag{
+            background:var(--secondary);
+            color:var(--primary);
+            padding:5px 12px;
+            border-radius:20px;
+            display:inline-block;
+            font-size:14px;
+            margin-bottom:20px;
+            font-weight: bold;
+        }
+
+        .content{
+            background:white;
+            padding:40px;
+            border-radius:15px;
+            margin:30px 0;
+            box-shadow:var(--shadow);
+        }
+
+        .content img{
+            width:100%;
+            border-radius:12px;
+            margin-bottom:25px;
+            max-height:500px;
+            object-fit:cover;
+        }
+
+        .content h3{
+            color:var(--primary);
+            margin:20px 0 10px;
+            font-size:22px;
+            border-left: 4px solid var(--secondary);
+            padding-left: 12px;
+        }
+
+        .content p{
+            font-size:16px;
+            color:#555;
+            margin-bottom:15px;
+            line-height:1.9;
+            text-align: justify;
+        }
+
+        .btn{
+            display:inline-block;
+            background:var(--primary);
+            color:white;
+            padding:12px 25px;
+            border-radius:30px;
+            text-decoration:none;
+            margin-top:20px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .btn:hover{
+            background: #6b3610;
+            transform: translateY(-2px);
+        }
+
+        .btn-group{
+            display:flex;
+            gap:15px;
+            justify-content:center;
+            margin:30px 0;
+        }
+
+        .footer{
+            background:var(--primary);
+            color:white;
+            text-align:center;
+            padding:30px;
+            margin-top:50px;
+        }
+
+        @media(max-width:768px){
+            .nav-menu{
+                display:none;
+            }
+            .header h1{
+                font-size:28px;
+            }
+            .content{
+                padding:25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container nav-container">
+            <div class="logo">非遗匠心</div>
+            <ul class="nav-menu">
+                <li><a href="非遗匠心·传统文化数字化展示平台.html">首页</a></li>
+                <li><a href="非遗项目展示.html">项目列表</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="header">
+        <h1>中国书法</h1>
+        <div class="tag">传统艺术 · 国家级非物质文化遗产</div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <img src="img/中国书法.webp" alt="中国书法">
+            
+            <h3>项目简介</h3>
+            <p>中国书法是以汉字为载体，以毛笔为工具，通过线条、结构、章法展现东方美学的传统艺术，被誉为“无言的诗，无形的舞，无图的画”。</p>
+
+            <h3>历史渊源</h3>
+            <p>书法起源于汉字的诞生，历经甲骨文、金文、篆书、隶书、楷书、行书、草书的演变，三千年来不断发展，成为中国独有的艺术形式。</p>
+
+            <h3>艺术特点</h3>
+            <p>书法讲究笔法、结构、章法，线条刚柔并济、疏密有致，兼具实用性与艺术性。不同书体风格各异，楷书端庄、行书流畅、草书奔放。</p>
+
+            <h3>主要书体</h3>
+            <p>篆书古朴典雅，隶书蚕头燕尾，楷书端庄工整，行书流畅自然，草书奔放洒脱。五种书体构成了中国书法的完整体系。</p>
+
+            <h3>文化价值</h3>
+            <p>书法是中华传统文化的核心符号，2009年列入人类非物质文化遗产代表作名录，是世界认识中国文化的重要窗口。</p>
+
+            <h3>传承意义</h3>
+            <p>练习书法能修身养性、陶冶情操，传承书法艺术就是传承中华文化的根与魂，让汉字之美代代相传。</p>
+
+            <div class="btn-group">
+                <a href="非遗项目展示.html" class="btn">返回项目列表</a>
+                <a href="非遗匠心·传统文化数字化展示平台.html" class="btn">返回首页</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>非遗匠心·传统文化数字化展示平台 © 2026</p>
+        <p>传承中华优秀传统文化 · 守护非物质文化遗产</p>
+    </div>
+</body>
+</html>

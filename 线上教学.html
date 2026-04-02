@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>非遗线上体验教学 - 非遗匠心展示平台</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Microsoft YaHei", sans-serif;
+			}
+
+			:root {
+				--primary: #8B4513;
+				--secondary: #D2B48C;
+				--dark: #333;
+				--light: #fff;
+				--gray: #f5f5f5;
+			}
+
+			body {
+				line-height: 1.6;
+				color: var(--dark);
+				background: var(--gray);
+			}
+
+			.navbar {
+				background: var(--primary);
+				padding: 15px 0;
+				position: sticky;
+				top: 0;
+				z-index: 100;
+			}
+
+			.container {
+				width: 90%;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.nav-container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.logo {
+				color: var(--light);
+				font-size: 24px;
+				font-weight: bold;
+			}
+
+			.nav-menu {
+				display: flex;
+				list-style: none;
+			}
+
+			.nav-menu li {
+				margin-left: 30px;
+			}
+
+			.nav-menu a {
+				color: var(--light);
+				text-decoration: none;
+				font-size: 16px;
+				transition: 0.3s;
+			}
+
+			.nav-menu a:hover {
+				color: var(--secondary);
+			}
+
+			.header {
+				padding: 60px 0;
+				text-align: center;
+				background: var(--light);
+			}
+
+			.header h1 {
+				font-size: 36px;
+				color: var(--primary);
+				margin-bottom: 15px;
+			}
+
+			.header p {
+				font-size: 18px;
+				color: #555;
+			}
+
+			.section-title {
+				text-align: center;
+				margin: 50px 0 30px;
+				font-size: 32px;
+				color: var(--primary);
+				position: relative;
+			}
+
+			.section-title::after {
+				content: '';
+				width: 80px;
+				height: 3px;
+				background: var(--secondary);
+				position: absolute;
+				bottom: -10px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			.course-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+				gap: 30px;
+				margin-bottom: 50px;
+			}
+
+			.course-card {
+				background: var(--light);
+				border-radius: 15px;
+				overflow: hidden;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+				transition: 0.3s;
+			}
+
+			.course-card:hover {
+				transform: translateY(-5px);
+			}
+
+			.course-card img {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+				display: block;
+			}
+
+			.course-card-body {
+				padding: 20px;
+			}
+
+			.course-card-title {
+				font-size: 18px;
+				color: var(--primary);
+				margin-bottom: 10px;
+			}
+
+			.course-card-teacher {
+				font-size: 14px;
+				color: #666;
+				margin-bottom: 10px;
+			}
+
+			.course-card-text {
+				color: #666;
+				font-size: 14px;
+				margin-bottom: 15px;
+			}
+
+			.course-card-btn {
+				display: inline-block;
+				padding: 8px 15px;
+				background: var(--primary);
+				color: var(--light);
+				text-decoration: none;
+				border-radius: 5px;
+				font-size: 14px;
+				transition: 0.3s;
+			}
+
+			.course-card-btn:hover {
+				background: #6d3510;
+			}
+
+			.footer {
+				background: var(--primary);
+				color: var(--light);
+				text-align: center;
+				padding: 30px 0;
+				margin-top: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="container nav-container">
+				<div class="logo">非遗匠心</div>
+				<ul class="nav-menu">
+					<li><a href="非遗匠心·传统文化数字化展示平台.html">首页</a></li>
+					<li><a href="非遗项目展示.html">非遗展示</a></li>
+					<li><a href="数字展厅.html">数字展厅</a></li>
+					<li><a href="匠心传承.html">匠心传承</a></li>
+					<li><a href="新闻资讯.html">新闻资讯</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="header">
+			<div class="container">
+				<h1>非遗线上体验教学</h1>
+				<p>非遗传承人亲自授课，零基础也能轻松学习传统技艺</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<h2 class="section-title">热门课程</h2>
+			<div class="course-grid">
+				<div class="course-card">
+					<img src="https://img2.baidu.com/it/u=2468135790,1357902468" alt="剪纸课程">
+					<div class="course-card-body">
+						<h3 class="course-card-title">剪纸入门：吉祥图案剪法</h3>
+						<p class="course-card-teacher">讲师：王师傅（国家级非遗传承人）</p>
+						<p class="course-card-text">本课程将带领大家学习剪纸的基本技巧，从简单的窗花开始，逐步掌握吉祥图案的剪法，感受剪纸艺术的魅力。</p>
+						<a href="#" class="course-card-btn">立即报名</a>
+					</div>
+				</div>
+				<div class="course-card">
+					<img src="https://img1.baidu.com/it/u=1357924680,2468013579" alt="陶艺课程">
+					<div class="course-card-body">
+						<h3 class="course-card-title">陶艺基础：手工捏塑与拉坯</h3>
+						<p class="course-card-teacher">讲师：李师傅（省级非遗传承人）</p>
+						<p class="course-card-text">课程将教授陶艺的基本手法，包括手工捏塑和拉坯成型，让学员亲手制作属于自己的陶艺作品。</p>
+						<a href="#" class="course-card-btn">立即报名</a>
+					</div>
+				</div>
+				<div class="course-card">
+					<img src="https://img0.baidu.com/it/u=161232417,4212567809&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667" alt="书法课程">
+					<div class="course-card-body">
+						<h3 class="course-card-title">书法入门：楷书基础笔画</h3>
+						<p class="course-card-teacher">讲师：张老师（著名书法家）</p>
+						<p class="course-card-text">从零开始，系统学习楷书的基本笔画和结构，掌握正确的执笔方法和书写姿势，打下坚实的书法基础。</p>
+						<a href="#" class="course-card-btn">立即报名</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<p>非遗匠心·传统文化数字化展示平台 © 2026 版权所有</p>
+				<p>传承中华优秀传统文化 · 推动非遗数字化保护与传播</p>
+			</div>
+		</footer>
+	</body>
+</html>

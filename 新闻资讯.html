@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>新闻资讯 - 非遗匠心展示平台</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Microsoft YaHei", sans-serif;
+			}
+
+			:root {
+				--primary: #8B4513;
+				--secondary: #D2B48C;
+				--dark: #333;
+				--light: #fff;
+				--gray: #f5f5f5;
+			}
+
+			body {
+				line-height: 1.6;
+				color: var(--dark);
+				background: var(--gray);
+			}
+
+			.navbar {
+				background: var(--primary);
+				padding: 15px 0;
+				position: sticky;
+				top: 0;
+				z-index: 100;
+			}
+
+			.container {
+				width: 90%;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.nav-container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.logo {
+				color: var(--light);
+				font-size: 24px;
+				font-weight: bold;
+			}
+
+			.nav-menu {
+				display: flex;
+				list-style: none;
+			}
+
+			.nav-menu li {
+				margin-left: 30px;
+			}
+
+			.nav-menu a {
+				color: var(--light);
+				text-decoration: none;
+				font-size: 16px;
+				transition: 0.3s;
+			}
+
+			.nav-menu a:hover {
+				color: var(--secondary);
+			}
+
+			.header {
+				padding: 60px 0;
+				text-align: center;
+				background: var(--light);
+			}
+
+			.header h1 {
+				font-size: 36px;
+				color: var(--primary);
+				margin-bottom: 15px;
+			}
+
+			.header p {
+				font-size: 18px;
+				color: #555;
+			}
+
+			.section-title {
+				text-align: center;
+				margin: 50px 0 30px;
+				font-size: 32px;
+				color: var(--primary);
+				position: relative;
+			}
+
+			.section-title::after {
+				content: '';
+				width: 80px;
+				height: 3px;
+				background: var(--secondary);
+				position: absolute;
+				bottom: -10px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			.news-list {
+				max-width: 800px;
+				margin: 0 auto;
+			}
+
+			.news-item {
+				background: var(--light);
+				padding: 30px;
+				border-radius: 15px;
+				margin-bottom: 30px;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+			}
+
+			.news-item h3 {
+				font-size: 22px;
+				color: var(--primary);
+				margin-bottom: 10px;
+			}
+
+			.news-meta {
+				color: #999;
+				font-size: 14px;
+				margin-bottom: 15px;
+			}
+
+			.news-content {
+				color: #555;
+				line-height: 1.8;
+			}
+
+			.footer {
+				background: var(--primary);
+				color: var(--light);
+				text-align: center;
+				padding: 30px 0;
+				margin-top: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="container nav-container">
+				<div class="logo">非遗匠心</div>
+				<ul class="nav-menu">
+					<li><a href="非遗匠心·传统文化数字化展示平台.html">首页</a></li>
+					<li><a href="非遗项目展示.html">非遗展示</a></li>
+					<li><a href="数字展厅.html">数字展厅</a></li>
+					<li><a href="匠心传承.html">匠心传承</a></li>
+					<li><a href="新闻资讯.html">新闻资讯</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="header">
+			<div class="container">
+				<h1>新闻资讯</h1>
+				<p>了解非遗最新动态，感受传统文化魅力</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="news-list">
+				<div class="news-item">
+					<h3>2026非遗文化节圆满举办，线上线下共赏文化盛宴</h3>
+					<div class="news-meta">发布时间：2026-03-30 | 分类：文化活动</div>
+					<div class="news-content">
+						<p>为期一周的2026非遗文化节于昨日圆满落幕。本届文化节以“传承与创新”为主题，吸引了全国200余项非遗项目参展，涵盖传统戏剧、民间美术、手工技艺等多个类别。活动期间，不仅有精彩的非遗表演、技艺展示，还首次推出了“云上文创市集”，让观众足不出户就能购买到精美的非遗文创产品。据统计，本次文化节线上线下累计参与人次超过千万，成为一次全民共享的文化盛宴。
+						</p>
+					</div>
+				</div>
+
+				<div class="news-item">
+					<h3>数字化赋能非遗传承，让古老技艺焕发新生</h3>
+					<div class="news-meta">发布时间：2026-03-20 | 分类：政策动态</div>
+					<div class="news-content">
+						<p>近年来，随着数字技术的飞速发展，越来越多的非遗项目开始拥抱数字化转型。通过3D扫描、VR/AR技术，非遗文物得以数字化保存和展示；在线直播、短视频平台让非遗技艺走进大众视野；数字文创产品的开发则为非遗传承注入了新的活力。数字化不仅为非遗保护提供了新手段，更让传统文化在新时代找到了新的传播方式和发展路径，真正实现了“活态传承”。
+						</p>
+					</div>
+				</div>
+
+				<div class="news-item">
+					<h3>非遗进校园活动正式启动，传统文化扎根校园</h3>
+					<div class="news-meta">发布时间：2026-03-10 | 分类：传承活动</div>
+					<div class="news-content">
+						<p>为推动非遗文化的普及与传承，由教育部和文旅部联合发起的“非遗进校园”活动近日在全国百所中小学正式启动。活动将通过邀请非遗传承人授课、开设非遗兴趣社团、举办校园非遗节等形式，让青少年近距离接触和学习传统文化。此举旨在从小培养青少年对非遗文化的兴趣和热爱，为非遗传承培养后备力量，让中华优秀传统文化在校园中生根发芽。
+						</p>
+					</div>
+				</div>
+
+				<div class="news-item">
+					<h3>《非遗保护法》修订草案公开征求意见，强化数字化保护措施</h3>
+					<div class="news-meta">发布时间：2026-02-28 | 分类：政策法规</div>
+					<div class="news-content">
+						<p>近日，《中华人民共和国非物质文化遗产保护法》修订草案正式向社会公开征求意见。草案新增了关于非遗数字化保护的专门条款，明确提出要支持运用现代信息技术开展非遗的记录、保存、展示和传播。业内专家表示，这将为非遗的数字化保护提供更有力的法律保障，推动非遗保护工作进入新阶段。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<p>非遗匠心·传统文化数字化展示平台 © 2026 版权所有</p>
+				<p>传承中华优秀传统文化 · 推动非遗数字化保护与传播</p>
+			</div>
+		</footer>
+	</body>
+</html>

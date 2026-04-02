@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>非遗与现代化融合案例展示 - 非遗匠心展示平台</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Microsoft YaHei", sans-serif;
+			}
+
+			:root {
+				--primary: #8B4513;
+				--secondary: #D2B48C;
+				--dark: #333;
+				--light: #fff;
+				--gray: #f5f5f5;
+			}
+
+			body {
+				line-height: 1.6;
+				color: var(--dark);
+				background: var(--gray);
+			}
+
+			.navbar {
+				background: var(--primary);
+				padding: 15px 0;
+				position: sticky;
+				top: 0;
+				z-index: 100;
+			}
+
+			.container {
+				width: 90%;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.nav-container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.logo {
+				color: var(--light);
+				font-size: 24px;
+				font-weight: bold;
+			}
+
+			.nav-menu {
+				display: flex;
+				list-style: none;
+			}
+
+			.nav-menu li {
+				margin-left: 30px;
+			}
+
+			.nav-menu a {
+				color: var(--light);
+				text-decoration: none;
+				font-size: 16px;
+				transition: 0.3s;
+			}
+
+			.nav-menu a:hover {
+				color: var(--secondary);
+			}
+
+			.header {
+				padding: 60px 0;
+				text-align: center;
+				background: var(--light);
+			}
+
+			.header h1 {
+				font-size: 36px;
+				color: var(--primary);
+				margin-bottom: 15px;
+			}
+
+			.header p {
+				font-size: 18px;
+				color: #555;
+			}
+
+			.section-title {
+				text-align: center;
+				margin: 50px 0 30px;
+				font-size: 32px;
+				color: var(--primary);
+				position: relative;
+			}
+
+			.section-title::after {
+				content: '';
+				width: 80px;
+				height: 3px;
+				background: var(--secondary);
+				position: absolute;
+				bottom: -10px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			.case-card {
+				background: var(--light);
+				border-radius: 15px;
+				overflow: hidden;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+				margin-bottom: 40px;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.case-card-img {
+				flex: 1;
+				min-width: 300px;
+			}
+
+			.case-card-img img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			.case-card-body {
+				flex: 2;
+				min-width: 300px;
+				padding: 30px;
+			}
+
+			.case-card-title {
+				font-size: 24px;
+				color: var(--primary);
+				margin-bottom: 15px;
+			}
+
+			.case-card-subtitle {
+				font-size: 16px;
+				color: #666;
+				margin-bottom: 20px;
+			}
+
+			.case-card-text {
+				color: #555;
+				font-size: 15px;
+				line-height: 1.8;
+				margin-bottom: 15px;
+			}
+
+			.footer {
+				background: var(--primary);
+				color: var(--light);
+				text-align: center;
+				padding: 30px 0;
+				margin-top: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="container nav-container">
+				<div class="logo">非遗匠心</div>
+				<ul class="nav-menu">
+					<li><a href="非遗匠心·传统文化数字化展示平台.html">首页</a></li>
+					<li><a href="非遗项目展示.html">非遗展示</a></li>
+					<li><a href="数字展厅.html">数字展厅</a></li>
+					<li><a href="匠心传承.html">匠心传承</a></li>
+					<li><a href="新闻资讯.html">新闻资讯</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="header">
+			<div class="container">
+				<h1>非遗与现代化融合案例展示</h1>
+				<p>探索非遗传承新路径，让传统文化在新时代焕发新生</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="case-card">
+				<div class="case-card-img">
+					<img src="https://pic.baike.soso.com/ugc/baikepic2/25802/cut-20220421160224-1443519694_png_1200_675.jpg/0" alt="数字博物馆">
+				</div>
+				<div class="case-card-body">
+					<h3 class="case-card-title">案例一：非遗数字博物馆</h3>
+					<p class="case-card-subtitle">数字化技术让文物“活”起来</p>
+					<p class="case-card-text">某省博物馆利用3D扫描和VR技术，将馆内珍贵的非遗文物进行数字化采集和建模，打造了线上数字博物馆。观众可以通过电脑或手机，720°全景欣赏文物细节，还能通过VR设备进行沉浸式互动体验，极大地拓展了非遗文化的传播范围和体验方式。</p>
+				</div>
+			</div>
+
+			<div class="case-card">
+				<div class="case-card-img">
+					<img src="https://img2.baidu.com/it/u=1102462770,390055216&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667" alt="非遗文创品牌">
+				</div>
+				<div class="case-card-body">
+					<h3 class="case-card-title">案例二：非遗文创品牌的崛起</h3>
+					<p class="case-card-subtitle">传统工艺与现代设计的完美结合</p>
+					<p class="case-card-text">一个年轻的设计师团队深入民间，与多位非遗传承人合作，将传统的刺绣、印染、木雕等工艺与现代审美和生活用品相结合，打造了一系列深受年轻人喜爱的文创产品。通过线上电商平台和社交媒体推广，该品牌迅速走红，不仅让传统工艺获得了新的生命力，也为传承人带来了可观的收入。</p>
+				</div>
+			</div>
+
+			<div class="case-card">
+				<div class="case-card-img">
+					<img src="https://img0.baidu.com/it/u=161232417,4212567809&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667" alt="非遗主题旅游">
+				</div>
+				<div class="case-card-body">
+					<h3 class="case-card-title">案例三：非遗主题文旅融合</h3>
+					<p class="case-card-subtitle">打造沉浸式文化旅游体验</p>
+					<p class="case-card-text">某旅游景区将当地的非遗项目（如皮影戏、传统舞蹈）融入旅游线路中，打造了“非遗小镇”。游客不仅可以观看非遗表演，还能亲手参与制作体验，购买非遗文创产品。这种文旅融合的模式，既保护和传承了非遗文化，又丰富了旅游内涵，实现了文化效益和经济效益的双赢。</p>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<p>非遗匠心·传统文化数字化展示平台 © 2026 版权所有</p>
+				<p>传承中华优秀传统文化 · 推动非遗数字化保护与传播</p>
+			</div>
+		</footer>
+	</body>
+</html>
